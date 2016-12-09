@@ -27,6 +27,12 @@ Plugin 'VundleVim/Vundle.vim'
 " The monokai color scheme.
 Plugin 'sickill/vim-monokai'
 
+" The project source tree browser.
+Plugin 'scrooloose/nerdtree'
+
+" The enhanced editor status bar.
+Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+
 " The auto-complete module.
 Plugin 'Valloric/YouCompleteMe'
 
@@ -52,10 +58,11 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 
 " Monokai color scheme
-syntax enable
+syntax on
 colorscheme monokai
 
 " ---------- General Settings ----------
+syntax enable
 
 " Show line numbers
 set number
@@ -91,6 +98,13 @@ set foldmethod=syntax
 
 " Do not fold the code by default
 set foldlevel=10000
+
+" ---------- NerdTree Project Browser ----------
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
+
+" ---------- Powerline Editor Status Monitor ----------
+let g:Powerline_colorscheme='monokai'
 
 " ---------- YCM Auto Complete ----------
 let g:ycm_confirm_extra_conf=0
