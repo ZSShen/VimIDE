@@ -25,13 +25,17 @@ Plugin 'VundleVim/Vundle.vim'
 "Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 
 " The monokai color scheme.
-Plugin 'sickill/vim-monokai'
+"Plugin 'sickill/vim-monokai'
+Plugin 'ZSShen/vim-monokai'
 
 " The project source tree browser.
 Plugin 'scrooloose/nerdtree'
 
 " The enhanced editor status bar.
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+
+" The enhanced C++ syntax highlighting.
+Plugin 'octol/vim-cpp-enhanced-highlight'
 
 " The auto-complete module.
 Plugin 'Valloric/YouCompleteMe'
@@ -57,7 +61,7 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
-" Monokai color scheme
+" ---------- Monokai color scheme ----------
 syntax on
 colorscheme monokai
 
@@ -76,11 +80,13 @@ set hlsearch
 " Highlight the current cursor line
 set cursorline
 
+" Highlight the 80 columns margin.
+set colorcolumn=80
+
 " Trim the trailing white space on save.
 autocmd BufWritePre <buffer> :%s/\s\+$//e
 
 " ---------- Indentation ----------
-
 " Use spaces instead of tabs
 set expandtab
 
@@ -104,13 +110,25 @@ autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
 
 " ---------- Powerline Editor Status Monitor ----------
-let g:Powerline_colorscheme='monokai'
+set guifont=Inconsolata\ for\ Powerline:h15
+let g:Powerline_symbols = 'fancy'
+set encoding=utf-8
+set t_Co=256
+set fillchars+=stl:\ ,stlnc:\
+set term=xterm-256color
+set termencoding=utf-8
+
+" ---------- Enhanced C++ syntax highlighting ----------
+let g:cpp_class_scope_highlight=1
+let g:cpp_concepts_highlight=1
+let g:cpp_experimental_simple_template_highlight=1
+
+" ---------- Indexer CTags Manager ----------
+let g:indexer_ctagsCommandLineOptions="--c++-kinds=+p+l+x+c+d+e+f+g+m+n+s+t+u+v --fields=+iaSl --extra=+q"
 
 " ---------- YCM Auto Complete ----------
 let g:ycm_confirm_extra_conf=0
 let g:ycm_collect_identifiers_from_tags_files=1
 
 set tags+=/data/misc/software/misc./vim/stdcpp.tags
-
-
 
