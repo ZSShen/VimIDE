@@ -25,8 +25,7 @@ Plugin 'VundleVim/Vundle.vim'
 "Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 
 " The monokai color scheme.
-"Plugin 'sickill/vim-monokai'
-Plugin 'ZSShen/vim-monokai'
+Plugin 'filfirst/Monota'
 
 " The project source tree browser.
 Plugin 'scrooloose/nerdtree'
@@ -63,7 +62,7 @@ filetype plugin indent on    " required
 
 " ---------- Monokai color scheme ----------
 syntax on
-colorscheme monokai
+colorscheme Monota
 
 " ---------- General Settings ----------
 syntax enable
@@ -124,11 +123,14 @@ let g:cpp_concepts_highlight=1
 let g:cpp_experimental_simple_template_highlight=1
 
 " ---------- Indexer CTags Manager ----------
-let g:indexer_ctagsCommandLineOptions="--c++-kinds=+p+l+x+c+d+e+f+g+m+n+s+t+u+v --fields=+iaSl --extra=+q"
+"let g:indexer_ctagsCommandLineOptions="--c++-kinds=+p+l+x+c+d+e+f+g+m+n+s+t+u+v --fields=+iaSl --extra=+q"
 
 " ---------- YCM Auto Complete ----------
-let g:ycm_confirm_extra_conf=0
-let g:ycm_collect_identifiers_from_tags_files=1
+nnoremap <F12> :YcmCompleter GoTo<CR>
 
-set tags+=/data/misc/software/misc./vim/stdcpp.tags
+let g:ycm_global_ycm_extra_conf = '~/ycm_extra_conf.py'
+let g:ycm_confirm_extra_conf = 0
+let g:ycm_collect_identifiers_from_tags_files = 1
+
+"set tags+=/data/misc/software/misc./vim/stdcpp.tags
 
