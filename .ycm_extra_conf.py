@@ -1,3 +1,4 @@
+
 # This file is NOT licensed under the GPLv3, which is the license for the rest
 # of YouCompleteMe.
 #
@@ -38,8 +39,6 @@ flags = [
 '-Wall',
 '-Wextra',
 '-Werror',
-'-Wc++98-compat',
-'-Wno-long-long',
 '-Wno-variadic-macros',
 '-fexceptions',
 '-DNDEBUG',
@@ -81,6 +80,11 @@ flags = [
 './tests/gmock',
 '-isystem',
 './tests/gmock/include',
+
+'-I/usr/lib',
+'-I/usr/include',
+'-I/usr/local/lib',
+'-I/usr/local/inlude',
 ]
 
 
