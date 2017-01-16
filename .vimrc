@@ -39,11 +39,6 @@ Plugin 'octol/vim-cpp-enhanced-highlight'
 " The auto-complete module.
 Plugin 'Valloric/YouCompleteMe'
 
-" The automaci ctag generator.
-Plugin 'vim-scripts/DfrankUtil'
-Plugin 'vim-scripts/vimprj'
-Plugin 'vim-scripts/indexer.tar.gz'
-
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -94,7 +89,6 @@ set tabstop=4
 
 " Number of auto-indent spaces
 set shiftwidth=4
-
 set autoindent
 
 " ---------- Folding ----------
@@ -122,8 +116,6 @@ let g:cpp_class_scope_highlight=1
 let g:cpp_concepts_highlight=1
 let g:cpp_experimental_simple_template_highlight=1
 
-" ---------- Indexer CTags Manager ----------
-"let g:indexer_ctagsCommandLineOptions="--c++-kinds=+p+l+x+c+d+e+f+g+m+n+s+t+u+v --fields=+iaSl --extra=+q"
 
 " ---------- YCM Auto Complete ----------
 nnoremap <F12> :YcmCompleter GoTo<CR>
@@ -131,6 +123,4 @@ nnoremap <F12> :YcmCompleter GoTo<CR>
 let g:ycm_global_ycm_extra_conf = '~/ycm_extra_conf.py'
 let g:ycm_confirm_extra_conf = 0
 let g:ycm_collect_identifiers_from_tags_files = 1
-
-"set tags+=/data/misc/software/misc./vim/stdcpp.tags
 
