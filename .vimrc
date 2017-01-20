@@ -99,8 +99,12 @@ set foldmethod=syntax
 set foldlevel=10000
 
 " ---------- NerdTree Project Browser ----------
+nnoremap <C-n> :NERDTreeToggle<CR>
+
+let NERDTreeShowHidden=1
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
+
 
 " ---------- Powerline Editor Status Monitor ----------
 set guifont=Inconsolata\ for\ Powerline:h15
@@ -111,6 +115,7 @@ set fillchars+=stl:\ ,stlnc:\
 set term=xterm-256color
 set termencoding=utf-8
 
+
 " ---------- Enhanced C++ syntax highlighting ----------
 let g:cpp_class_scope_highlight=1
 let g:cpp_concepts_highlight=1
@@ -120,7 +125,7 @@ let g:cpp_experimental_simple_template_highlight=1
 " ---------- YCM Auto Complete ----------
 nnoremap <F12> :YcmCompleter GoTo<CR>
 
-let g:ycm_global_ycm_extra_conf = '~/ycm_extra_conf.py'
+let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
 let g:ycm_confirm_extra_conf = 0
 let g:ycm_collect_identifiers_from_tags_files = 1
 
