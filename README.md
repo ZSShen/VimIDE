@@ -1,13 +1,25 @@
 # **VimIDE**  
 
-VimIDE is configured to be efficient for source code exploration and development under ***Mac*** and ***Linux***. It is now targeting on ***C++*** and ***Python***. Since all the configuration is managed by [Vundle], please make sure that Vundle is properly installed if you interest in VimIDE.  
+VimIDE is configured to be efficient for source code exploration and development under ***Mac*** and ***Linux***. It is now targeting on ***C++*** and ***Python***.    
 
 
 ## **Installation**
-
+Assume the absolute path of your local repo is `REPO_DIRECTORY`.  
+```shell
+$ git clone https://github.com/ZSShen/VimIDE.git REPO_DIRECTORY
+$ cd REPO_DIRECTORY
+$ ./install.sh
+```
 
 ## **Usage**
-
+Assume the absolute path of your project is `PROJECT_DIRECTORY`.  
+```shell
+$ cp REPO_DIRECTORY/.ycm_extra_conf.py PROJECT_DIRECTORY
+```
+The configuration should be copied only once. Then launch your Vim:  
+```shell
+$ vim PROJECT_DIRECTORY
+```
 
 ## **Plugin**  
 The primary plugins which VimIDE leverages for configuration.  
@@ -39,3 +51,8 @@ An ultimate source code exploration and completion engine for most of the preval
 [NERDTree]:https://github.com/scrooloose/nerdtree
 [PowerLine]:https://github.com/Lokaltog/vim-powerline
 [YouCompleteMe]:https://github.com/Valloric/YouCompleteMeUse
+
+
+## **Contact**
+Please contact me via the mail andy.zsshen@gmail.com.  
+Note that the configuration is still under tuning. Recommendation and bug report are desired.  
