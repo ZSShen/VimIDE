@@ -5,11 +5,11 @@ VimIDE is configured to be efficient for source code exploration and development
 
 | **Cpp Development Screenshot** |
 |---|
-| <img src="https://github.com/ZSShen/VimIDE/blob/master/.demo/ScreenCppDev.png"/width="800px"> |
+| <img src="https://raw.githubusercontent.com/ZSShen/VimIDE/master/.demo/ScreenCppDev.png" width="800px"/> |
 
 | **Python Development Screenshot** |
 |---|
-| <img src="https://github.com/ZSShen/VimIDE/blob/master/.demo/ScreenPythonDev.png"/width="800px"> |
+| <img src="https://raw.githubusercontent.com/ZSShen/VimIDE/master/.demo/ScreenPythonDev.png" width="800px"/> |
 
 ## **Prerequisite**
 + Make sure you have Vim with version **7.4.143** or above.
