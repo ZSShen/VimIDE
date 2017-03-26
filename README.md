@@ -1,6 +1,19 @@
 # **VimIDE**  
 
-VimIDE is configured to be efficient for source code exploration and development under ***Mac*** and ***Linux***. It is now targeting on ***C++*** and ***Python***.    
+VimIDE is configured to be efficient for source code exploration and development under ***Mac*** and ***Linux***. It is now targeting on modern ***C++*** and ***Python***.    
+
+
+| **Cpp Development Screenshot** |
+|---|
+| <img src="https://github.com/ZSShen/VimIDE/blob/master/.demo/ScreenCppDev.png"/width="800px"> |
+
+| **Python Development Screenshot** |
+|---|
+| <img src="https://github.com/ZSShen/VimIDE/blob/master/.demo/ScreenPythonDev.png"/width="800px"> |
+
+## **Prerequisite**
++ Make sure you have Vim with version **7.4.143** or above.
++ Modern C++ compilers like **GCC 5.1** or **Clang 3.4** are recommended. ([C++ Compiler Support Map])  
 
 
 ## **Installation**
@@ -46,6 +59,7 @@ An ultimate source code exploration and completion engine for most of the preval
   + Map `<F12>` to command `YcmCompleter GoTo`.  
 
 
+[C++ Compiler Support Map]:http://en.cppreference.com/w/cpp/compiler_support
 [Vundle]:https://github.com/VundleVim/Vundle.vim
 [Monota]:https://github.com/filfirst/Monota
 [NERDTree]:https://github.com/scrooloose/nerdtree
