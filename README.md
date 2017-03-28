@@ -40,8 +40,8 @@ The primary plugins which VimIDE leverages for configuration.
 ### [Monota]
 Enhanced ***Monokai-like*** color scheme for c++.  
 
-### [PowerLine]
-PowerLine allows you to create better-looking, more functional Vim status bar.  
+### [AirLine]
+AirLine allows you to create better-looking, more functional Vim status bar.  
 
 ### [NERDTree]
 NERDTree works as the ***project drawer*** which helps you to explore filesystem and to open files and directories.  
@@ -63,7 +63,7 @@ An ultimate source code exploration and completion engine for most of the preval
 [Vundle]:https://github.com/VundleVim/Vundle.vim
 [Monota]:https://github.com/filfirst/Monota
 [NERDTree]:https://github.com/scrooloose/nerdtree
-[PowerLine]:https://github.com/Lokaltog/vim-powerline
+[AirLine]:https://github.com/vim-airline/vim-airline
 [YouCompleteMe]:https://github.com/Valloric/YouCompleteMeUse
 
 
